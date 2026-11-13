@@ -1,0 +1,37 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "14.0 (devel)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2009.vpi";
+S_000002043B13A0D0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_000002043B13A260 .scope module, "signed_adder_8" "signed_adder_8" 3 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "a";
+    .port_info 1 /INPUT 8 "b";
+    .port_info 2 /OUTPUT 9 "sum";
+v000002043B14EE60_0 .net *"_ivl_1", 0 0, L_000002043B14C480;  1 drivers
+v000002043B14C0C0_0 .net *"_ivl_2", 8 0, L_000002043B14C520;  1 drivers
+v000002043B14C160_0 .net *"_ivl_5", 0 0, L_000002043B14C5C0;  1 drivers
+v000002043B14C200_0 .net *"_ivl_6", 8 0, L_000002043B14C660;  1 drivers
+o000002043B14EFC8 .functor BUFZ 8, c4<zzzzzzzz>; HiZ drive
+v000002043B14C2A0_0 .net/s "a", 7 0, o000002043B14EFC8;  0 drivers
+o000002043B14EFF8 .functor BUFZ 8, c4<zzzzzzzz>; HiZ drive
+v000002043B14C340_0 .net/s "b", 7 0, o000002043B14EFF8;  0 drivers
+v000002043B14C3E0_0 .net/s "sum", 8 0, L_000002043B14C700;  1 drivers
+L_000002043B14C480 .part o000002043B14EFC8, 7, 1;
+L_000002043B14C520 .concat [ 8 1 0 0], o000002043B14EFC8, L_000002043B14C480;
+L_000002043B14C5C0 .part o000002043B14EFF8, 7, 1;
+L_000002043B14C660 .concat [ 8 1 0 0], o000002043B14EFF8, L_000002043B14C5C0;
+L_000002043B14C700 .arith/sum 9, L_000002043B14C520, L_000002043B14C660;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    ".\stage1\rtl\signed_adder_8.v";
