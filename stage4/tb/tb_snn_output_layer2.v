@@ -172,7 +172,7 @@ module tb_snn_output_layer2;
             );
         end
 
-        // 9. 1000组随机测试
+        // 9.1000组随机测试
         for (i = 0; i < 1000; i = i + 1) begin
             check_step(
                 (i % 97) == 0,
