@@ -6,7 +6,6 @@ module accumulator_16(
     output reg signed [15:0] q
 );
 
-    // 由你完成
     always@(posedge clk) begin
         if(rst)
             q <= 16'b0;
