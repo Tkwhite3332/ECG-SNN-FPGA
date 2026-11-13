@@ -1,1 +1,1 @@
-# ECF-SNN-FPGA
+# ECG-SNN-FPGA
