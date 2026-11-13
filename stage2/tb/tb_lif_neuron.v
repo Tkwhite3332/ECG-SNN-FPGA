@@ -128,7 +128,7 @@ module tb_lif_neuron;
             );
         end
 
-        $display("PASS: All %0d tests passed!", count);
+        $display("PASS: All %0d tests passed", count);
         $finish;
     end
 
