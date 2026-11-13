@@ -166,7 +166,7 @@ module tb_snn_neuron_4in;
             );
         end
 
-        $display("PASS: All %0d tests passed!", test_count);
+        $display("PASS: All %0d tests passed", test_count);
         $finish;
     end
 
